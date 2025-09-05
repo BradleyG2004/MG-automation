@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Candidature CDI Job Étudiant - Mister Garden</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #2d5a27 0%, #4a7c59 50%, #6b8e23 100%);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+            position: relative;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="rgba(255,255,255,0.1)"/><circle cx="80" cy="40" r="1.5" fill="rgba(255,255,255,0.1)"/><circle cx="40" cy="80" r="1" fill="rgba(255,255,255,0.1)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .logo {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .logo::after {
+            content: '🥗';
+            margin-left: 10px;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            position: relative;
+            z-index: 1;
+        }
+
+        .form-container {
+            padding: 40px 30px;
+        }
+
+        .form-title {
+            color: #2d5a27;
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .form-description {
+            color: #666;
+            text-align: center;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        label {
+            display: block;
+            color: #2d5a27;
+            font-weight: 600;
+            margin-bottom: 8px;
+            font-size: 1rem;
+        }
+
+        .required {
+            color: #e74c3c;
+        }
+
+        input[type="email"],
+        input[type="text"],
+        select {
+            width: 100%;
+            padding: 15px 20px;
+            border: 2px solid #e1e8ed;
+            border-radius: 12px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            background: #fafbfc;
+        }
+
+        input[type="email"]:focus,
+        input[type="text"]:focus,
+        select:focus {
+            outline: none;
+            border-color: #4a7c59;
+            background: white;
+            box-shadow: 0 0 0 3px rgba(74, 124, 89, 0.1);
+        }
+
+        select {
+            cursor: pointer;
+            background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%234a7c59"><path d="M7 10l5 5 5-5z"/></svg>');
+            background-repeat: no-repeat;
+            background-position: right 15px center;
+            background-size: 20px;
+            padding-right: 50px;
+            appearance: none;
+        }
+
+        .submit-btn {
+            width: 100%;
+            background: linear-gradient(135deg, #4a7c59 0%, #6b8e23 100%);
+            color: white;
+            border: none;
+            padding: 18px 30px;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 20px;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(74, 124, 89, 0.3);
+        }
+
+        .submit-btn:active {
+            transform: translateY(0);
+        }
+
+        .footer {
+            background: #f8f9fa;
+            padding: 20px 30px;
+            text-align: center;
+            color: #666;
+            font-size: 0.9rem;
+            border-top: 1px solid #e1e8ed;
+        }
+
+
+        @media (max-width: 768px) {
+            .container {
+                margin: 10px;
+                border-radius: 15px;
+            }
+            
+            .header {
+                padding: 30px 20px;
+            }
+            
+            .form-container {
+                padding: 30px 20px;
+            }
+            
+            .logo {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">Mister Garden</div>
+            <div class="subtitle">Bar à Salades Fraîches</div>
+        </div>
+        
+        <div class="form-container">
+            <h2 class="form-title">Candidature CDI Job Étudiant</h2>
+            <p class="form-description">
+                Rejoignez notre équipe dynamique ! Poste en CDI adapté aux étudiants, 
+                créneaux de 12h à 14h dans nos restaurants.
+            </p>
+            
+            
+            <form id="candidatureForm" action="https://formsubmit.co/bgangnoukana@gmail.com" method="POST">
+                <div class="form-group">
+                    <label for="email">Adresse e-mail <span class="required">*</span></label>
+                    <input type="email" id="email" name="_replyto" required 
+                           placeholder="votre.email@exemple.com">
+                </div>
+                
+                <div class="form-group">
+                    <label for="nom_prenom">Nom et Prénom <span class="required">*</span></label>
+                    <input type="text" id="nom_prenom" name="nom_prenom" required 
+                           placeholder="Dupont Jean">
+                </div>
+                
+                <div class="form-group">
+                    <label for="localisation">Lieu de travail souhaité <span class="required">*</span></label>
+                    <select id="localisation" name="localisation" required>
+                        <option value="">Sélectionnez votre ville</option>
+                        <option value="Boulogne-Billancourt, 92100, France">Boulogne-Billancourt, 92100, France</option>
+                        <option value="Courbevoie, 92400, France">Courbevoie, 92400, France</option>
+                        <option value="Paris, 75009, France">Paris, 75009, France</option>
+                    </select>
+                </div>
+
+                <!-- Champ caché qui contiendra le message généré -->
+                <input type="hidden" name="message" id="message">
+                
+                <button type="submit" class="submit-btn">Postuler maintenant</button>
+            </form>
+        </div>
+        
+        <div class="footer">
+            <p>© 2024 Mister Garden - Tous droits réservés</p>
+            <p>Vos données sont protégées et ne seront utilisées que pour votre candidature.</p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('candidatureForm').addEventListener('submit', function(e) {
+            // Get form values
+            const email = document.getElementById('email').value.trim();
+            const nomPrenom = document.getElementById('nom_prenom').value.trim();
+            const localisation = document.getElementById('localisation').value;
+            
+            // Génération du message personnalisé
+            document.getElementById('message').value = 
+                `Bonjour ,
+
+Je suis "${nomPrenom}" et j'aimerais vous adresser ma candidature pour le poste en CDI de serveur de midi chez Mister Garden "${localisation}".
+
+Je viens de la part de Bradley KANA GANGNOU, employé à MG Europe.
+
+Cordialement`;
+        });
+        
+    </script>
+</body>
+</html>
